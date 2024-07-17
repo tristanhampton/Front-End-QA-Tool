@@ -1,0 +1,10 @@
+yp_qa:
+  version: 1.x
+  css:
+    theme:
+      css/yp_qa.css: {}
+  js:
+    js/yp_qa.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings

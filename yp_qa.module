@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_page_attachments()
+ */
+function yp_qa_page_attachments(array &$attachments) {
+
+  // Get current user
+  $user = \Drupal::currentUser();
+  $roles = $user->getRoles();
+
+  $widgetIsEnabled = \Drupal::config('yp_qa.settings')->get('enable_qa');
+
+  // exit if admin page
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    return;
+  }
+
+  // exit if not an admin
+  if (!in_array('administrator', $roles)) {
+    return;
+  }
+
+  // exit if widget isn't enabled
+  if (!$widgetIsEnabled) {
+    return;
+  }
+
+  // attach the library
+  $attachments['#attached']['library'][] = 'yp_qa/yp_qa';
+}

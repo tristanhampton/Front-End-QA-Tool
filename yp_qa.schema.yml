@@ -1,0 +1,7 @@
+yp_qa.settings:
+  type: config_object
+  label: 'YP QA settings'
+  mapping:
+    enable_qa:
+      type: boolean
+      label: 'Enable QA'

@@ -1,0 +1,7 @@
+yp_qa.settings_form:
+  path: '/admin/config/yp_qa'
+  defaults:
+    _form: '\Drupal\yp_qa\Form\YPQASettingsForm'
+    _title: 'YP QA Settings'
+  requirements:
+    _permission: 'administer site configuration'

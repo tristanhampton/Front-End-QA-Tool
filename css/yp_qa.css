@@ -1,0 +1,92 @@
+/* QA Classes
+ * ----------------------------------------------- */
+.qa-root.settings-columns {
+  background: repeating-linear-gradient(to right, #f8f8f8 0 5%, white 5% 10%);
+}
+
+.qa-root.settings-text li,
+.qa-root.settings-text p,
+.qa-root.settings-text time,
+.qa-root.settings-text h1,
+.qa-root.settings-text h2,
+.qa-root.settings-text h3,
+.qa-root.settings-text h4,
+.qa-root.settings-text h5,
+.qa-root.settings-text h6,
+.qa-root.settings-text label,
+.qa-root.settings-text a,
+.qa-root.settings-text blockquote {
+  outline: 1px solid red;
+}
+
+.qa-root.settings-list ul,
+.qa-root.settings-list ol {
+  outline: 1px solid blue;
+}
+
+.qa-root.settings-component .paragraph {
+  outline: 1px solid blueviolet;
+}
+
+.qa-root.settings-tabs .block-local-tasks-block {
+  display: none;
+}
+
+/* QA Settings Menu
+ * ----------------------------------------------- */
+.qa-settings {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: #FFF;
+  border: 2px solid #333;
+  padding: 1rem;
+  width: 8rem;
+  z-index: 5;
+  font-family: sans-serif;
+}
+
+.qa-settings[open] {
+  width: 24rem;
+}
+
+.qa-settings summary {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+.qa-settings summary::after {
+  display: inline-block;
+  content: '+';
+}
+
+.qa-settings[open] summary::after {
+  content: '-';
+}
+
+.qa-settings label {
+  margin: 1rem 0 0 0;
+  font-size: 2rem;
+}
+
+.qa-settings input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  position: unset;
+  border: 2px solid black;
+  opacity: 1;
+  margin-right: 0.5rem;
+}
+
+.qa-settings [for="settings-text"] {
+  color: red;
+}
+
+.qa-settings [for="settings-list"] {
+  color: blue;
+}
+
+.qa-settigns [for="settings-component"] {
+  color: blueviolet;
+}

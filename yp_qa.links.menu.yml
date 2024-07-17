@@ -1,0 +1,6 @@
+yp_qa.settings:
+  title: 'YP QA Settings'
+  parent: system.admin_config_development
+  route_name: yp_qa.settings_form
+  description: 'Configure YP QA module settings.'
+  weight: 100
